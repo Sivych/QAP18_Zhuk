@@ -70,3 +70,35 @@ for i in d:
         a.append(i)
 print(a)
 
+
+
+
+
+lst = [1, 7, 3, 0, 9, 123, 9, 6, 7, 0]
+max = 0
+i = 0
+
+print(bool("False"))
+print(bool('0'))
+print(bool(''))
+print(bool(None))
+print(bool({}))
+print(bool(True))
+
+
+def summa(x, y) -> int:
+    """
+    Summ x and y
+    :param x: int
+    :param y: int
+    :return: int
+    """
+    return x + y
+
+
+
+
+lst_str = ['один', 'два', 'три', 'четыре']
+
+a = list(map(len, lst_str))
+print(a)

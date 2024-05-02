@@ -24,6 +24,11 @@ str4 = int(s)
 new_str = str3[(s+1)::] + ' ' + str3[0:s]
 print(new_str)
 
+# 4. Упрощённый способ
+str3 = 'Ivanov Ivan'
+s = ' '.join(str3.split(' ')[::-1])
+print(s)
+
 # 5. Напишите программу которая удаляет пробел вначале и в конце строки
 
 str5 = ' stroka '

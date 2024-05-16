@@ -70,35 +70,88 @@ for i in d:
         a.append(i)
 print(a)
 
+def operate(*args, operation):
+    if operation == 'sum':
+        return sum(args)
+    print(operate(1, 2, 3, 4, operation='sum'))
+
+print(operate(1, 2, 3, 4, operation='sum'))         # Вывод: 10
+print(operate(1, 2, 3, 4, operation='multiply'))    # Вывод: 24
+print(operate(1, 2, 3, 4, operation='subtract'))    # Вывод: Unsupported operation
+
+#name = 'Egor'
+#age = '68'
+#str = f"hello, {name}, {age}"
+#print(str)
+#def open_files(*args, mode):
+
+
+#open_files('file1.txt', 'file2.txt', mode='r')
+# 'r' - чтение
+# 'w' - запись
+ #   if mode == 'r':
+ #       return 'Открыты для чтения'
+#print("file1.txt, 'file2.txt', Открыты для чтения")
+
+
+#def open_files(*args, mode):
+  #  str = ''
+ #   for i in args:
+  #      str+=i
+  #  if mode == "r":
+  #      print(f" {str}, Открыто для чтения")
+  #  elif mode == "w":
+  #      print(f" {str}, Открыто для записи")
+  #  else:
+  #      print(':(((')
+
+
+#def print_users(**kwargs, args):
+
+
+#print_users(
+#    John=dict(age=30, city='New York'),
+#    Alice=dict(age=25, city='San Francisco')
+#)
+#str = ''
+#    for i in args:
+ #       print(f" {age}")
+# Вывод:
+# User: John
+# age: 30
+# city: New York
+#
+# User: Alice
+# age: 25
+# city: San Francisco
+# str = f"hello, {name}, {age}"
 
 
 
 
-lst = [1, 7, 3, 0, 9, 123, 9, 6, 7, 0]
-max = 0
-i = 0
+#sqr(2)  == 4
+#cube(2) == 8
 
-print(bool("False"))
-print(bool('0'))
-print(bool(''))
-print(bool(None))
-print(bool({}))
-print(bool(True))
+def pow(num1):
+    def inner(num2):
+        return num2 ** num1
+    return inner
 
 
-def summa(x, y) -> int:
-    """
-    Summ x and y
-    :param x: int
-    :param y: int
-    :return: int
-    """
-    return x + y
+sqr = pow(2)
+cube = pow(3)
 
 
+print(sqr(2))
+print(cube(2))
 
+a = {'a': 1, 'b': 2, 'c': 3}
+b = {'c': 3, 'd': 4, 'e': 5}
 
-lst_str = ['один', 'два', 'три', 'четыре']
+together_keys = set(a.keys()).union(set(b.keys()))
+c = {
+    key: [a.get(key, None), b.get(key, None)]
+    for key in together_keys
+}
 
-a = list(map(len, lst_str))
-print(a)
+print(c)
